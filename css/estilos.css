@@ -1,0 +1,201 @@
+@font-face{
+    font-family: 'Dancing Script';
+    src: url('../fonts/DancingScript-Regular.ttf');
+ }
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Dancing Script';
+}
+
+body{
+    background-color: #02010a;
+}
+
+img{
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px #02010a;
+}
+
+#contenido
+{
+	width: 900px;
+	margin: 0 auto;
+}
+
+#header{
+    padding: 2%;
+    background-color: #5b7989;
+    border-radius: 10px 10px 0px 0px;
+    -moz-border-radius : 10px 10px 0px 0px;
+    -webkit-border-radius : 10px 10px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    animation: slidein 0.9s;
+}
+
+#titulo{
+    color: white;
+    text-shadow: 2px 2px 2px #02010a;
+    order:1;
+    flex-grow: 6
+}
+
+#menu{
+    order:2;
+    flex-grow: 1;
+}
+
+#menu ul li{
+    list-style: none; 
+    display: inline;
+    padding: 2%;  
+}
+#menu ul li a{
+    text-decoration: none;
+    color: white; 
+}
+
+#menu ul li a:hover{
+    text-decoration: none;
+    text-shadow: 2px 2px 5px #03160D;
+}
+
+
+article
+{
+	box-sizing: border-box;
+	float:left;
+	height: 100%;
+    background-color:#d5c75f;
+	padding: 2%;
+	text-align: center;
+}
+#central{
+    background-color: #82c3a6;
+    text-align:center;
+    padding: 2%;
+    width: 100%;
+   
+}
+#paisaje{
+    text-align: center;
+    padding: 2%;
+    width: 50%;
+   
+}
+#retrato{
+    text-align: center;
+    padding: 2%;
+    width: 50%;
+   
+}
+footer{
+    background-color: #C6d5c5;
+    border-radius: 0px 0px 10px 10px;
+    -moz-border-radius : 0px 0px 10px 10px;
+    -webkit-border-radius : 0px 0px 10px 10px;
+    clear:left; 
+    display: flex;
+    flex-direction: row;
+}
+
+footer li{
+    list-style: none;
+}
+
+#contactos, #terminos, #redes, #derechos{
+    padding: 2%;
+    flex: 1 2 25%;
+}
+
+
+
+#paisaje img{
+    transition: 1s;
+    box-shadow: 2px 2px 5px #82c3a6;
+}
+
+#retrato img{
+    transition: 1s;
+    box-shadow: 2px 2px 5px #82c3a6;
+}
+
+#paisaje img:hover{
+    transform: rotate(10deg);
+    transition: 1s;
+}
+
+#retrato img:hover{
+    transform: translate(5px, -20px);
+    transition: 1s;
+}
+
+footer img{
+    border: none;
+    box-shadow: none;
+    padding: 0.5%;
+}
+
+article[id^='imagen']{
+    width: 33.33333%;
+}
+
+.gris100{
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%); 
+}
+
+.blur10{
+    -webkit-filter: blur(10px); 
+    filter: blur(10px); 
+}
+
+.sepia90{
+    -webkit-filter: sepia(90%); 
+    filter: sepia(90%); 
+}
+
+@-webkit-keyframes slidein{
+    0% {
+        margin-top: 150%;
+       }
+    
+     60% {
+        margin-top: -5%;
+       }
+      100% {
+        margin-top: -0%;
+      }
+}
+
+@media screen and (max-width:900px){
+
+    #header{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #contenido
+    {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    #central,  #paisaje, #retrato,  header, footer,  div, article[id^='imagen']
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+
+}
+
+
+
+
+
+
+
